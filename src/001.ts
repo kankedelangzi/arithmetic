@@ -53,6 +53,40 @@ function insertSort(arr: number[]) {
 
 
 // 归并排序
+function mergeSort(arr: number[]) {
+
+  mergeSortImpl(arr, 0, arr.length - 1)
+}
+function mergeSortImpl(arr: number[], start: number, end: number) {
+  if(start === end) return ;
+  let mid = start + (end - start) >> 1
+  mergeSortImpl(arr, start, mid)
+  mergeSortImpl(arr, mid + 1, end)
+
+  merge(arr, start, mid, end)
+
+}
+
+function merge(arr: number[], start: number, mid: number, end: number) {
+  if(start === end) return;
+  let arrs = []
+  let i = start
+  let j = mid
+  for(; i < end; i++) {
+    arrs[i] = arr[i]
+  }
+  i = start
+  for(; i < end; i++) {
+    if(start > mid) arr[i] = arrs[++j]; continue
+    if(j > end) arr[i] = arrs[++start]; continue
+
+    if( arr[j] < arr[start]) {
+      arr[i] = arr[++j];
+    } else {
+      arr[i] = arr[++start]
+    }
+  }
+}
 
 
 // 堆排序

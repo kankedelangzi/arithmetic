@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _001_1 = require("./001");
+require("./003");
 const source = [
     [1, 3, 6, 9, 6, 4, 2],
     [1, 3, 6, 10, 4, 2],
@@ -11,5 +11,5 @@ const source = [
     [1],
     [3]
 ];
-_001_1.default(source);
+// test(source)
 //# sourceMappingURL=index.js.map

@@ -1,6 +1,6 @@
 import test from './001'
 
-
+import './003'
 
 
 const source = [
@@ -14,4 +14,4 @@ const source = [
   [3]
 ]
 
-test(source)
+// test(source)

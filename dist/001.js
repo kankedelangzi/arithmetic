@@ -49,6 +49,10 @@ function insertSort(arr) {
         ++i;
     }
 }
+// 希尔法排序
+// 归并排序
+// 堆排序
+// 优先队列
 function swap(arr, i, j) {
     let tem = arr[i];
     arr[i] = arr[j];
